@@ -4,17 +4,18 @@ Against: list = []
 Sustained: list = []
 Veto: list = []
 sub: str = str(input("Hello, what are we voting for today?"))
+vote: 0
 while count < 44:
-    vote: int = int (input("How would you like to vote? \n[1 - For\n2 - Against\n3 - Sustained\n4 - Veto]"))
     try:
+        vote: int = int (input("How would you like to vote? \n[1 - For\n2 - Against\n3 - Sustained\n4 - Veto]"))
         match vote:
             case 1: For.append(count)
             case 2: Against.append(count)
             case 3: Sustained.append(count)
             case 4:
                 Veto.append(count)
-                print(f"{' ' * 10}Country no. {count + 1} has Vetoed the vote! Added to Veto list.")
-        if 5 > vote > 0 : count+=1
+                print(f"Country no. {count + 1} has Vetoed the vote! Added to Veto list.")
+        count += 1 if  5 > vote > 0 else print("It seems the last vote was invalid. Please try again")
         if vote == 4:
             break;
     except Exception as e:
