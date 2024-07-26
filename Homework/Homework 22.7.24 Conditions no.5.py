@@ -1,4 +1,4 @@
-num: float = float (input("enter a number"))
-num1 = num / 10
-ans: int = int (10 * (num1- (num//10)))
-print (ans)
+num: int = int (input("enter a number"))
+left_d = num // 10
+right_d = num % 10
+print (f"{right_d}{left_d}")
