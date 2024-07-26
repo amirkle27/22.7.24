@@ -1,5 +1,4 @@
-num: float = float (input("enter a number"))
-num1 = num / 100
-num2 = num // 100
-ans: int = int (10* (num1 - num2))
-print (f"The second digit from the right is {ans}")
+num: int = int (input("enter a 3 digits number"))
+left_d = num // 100
+right_d = (num//10) % 10
+print (f"The second digit from the right is {right_d}")
